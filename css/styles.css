@@ -19,9 +19,133 @@ html{
     box-sizing:inherit;
 }
 
-/* Body */
+/*Body and background*/
 body {
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     font-family: "Outfit", sans-serif;
+    background-color: var(--dbluemainbg); 
+}
+
+/* Main */
+
+main {
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: fit-content;
+}
+
+/*Card (container)*/
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dbluecardbg);
+    width: 75%;
+    border-radius: 0.8rem;
+    padding: 1rem 0.3rem;
+    padding-bottom: 1.5rem; 
+}
+
+/*Image equilibrium*/
+
+.images {
+    position:relative;
+}
+
+.mainimg {
+    width: 90%;
+    border-radius: 0.8rem;
+    position:relative;
+}
+
+.iconview {
+    position: absolute;
+    top: 0%;
+    left: 5.5%;
+    opacity: 0;
+    padding: 5.4rem;
+    border-radius:0.5rem;
+}
+
+/*Inner text and figures*/
+h1 {
+    color: var(--white);
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p#descrtext {
+    color: var(--softblue);
+    width:90%;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+div.info {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.eth {
+    display: flex;
+    color: var(--cyan);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+.iconethereum, .iconclock {
+    margin-right: 0.3rem;
+}
+
+.time {
+    display:flex;
+    color: var(--softblue);
+    font-size: 0.9rem;
+}
+
+.creation {
+    display: flex;
+    width:90%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--dbluline);
+}
+
+.avatar {
+    width: 8%;
+    margin-right: 0.6rem; 
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+
+.creation p{
+    color: var(--softblue);
+    font-size: 0.8rem;
+}
+
+#name {
+    color: var(--white);
 }
 
 /*Footer*/
@@ -35,6 +159,24 @@ body {
 }
 
 /*Desktop version*/
-@media screen and (min-width: 376) {
+@media screen and (min-width: 376px) {
+    .container{ 
+       max-width: 375px; 
+    }
+    .mainimg:hover {
+        opacity: 0.6;
+    }
     
+    .iconview:hover{
+        opacity:0.6;
+        background-color: var(--cyan);
+    }
+
+    h1:hover {
+        color: var(--cyan);
+    }
+
+    #name:hover {
+        color: var(--cyan);
+    }
 }
